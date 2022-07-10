@@ -1,0 +1,5 @@
+* {
+    color: var(--col);
+    background-color: var(--bgc);
+    transition: all 1s ease-in;
+}
