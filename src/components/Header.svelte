@@ -28,6 +28,7 @@ import { theme } from "../lib/themes";
         
     }
     nav {
+        user-select: none;
         background-color: var(--bgc);
         border:1px solid var(--col);
         border-radius: 5px;

@@ -11,6 +11,7 @@
 
 <style>
     .cont {
+        user-select: none;
         width: 85%;
         margin-inline: auto;
         border: 1px dotted; 

@@ -15,7 +15,8 @@ import { theme } from "../lib/themes";
         text-align: center;
         border-radius: 5px;
         /* position: absolute; */
-        width: 95%;
+        width: 90%;
+        padding: 1em;
         margin-top: 1em;
         margin-left: 2.5%;
         bottom: 0;

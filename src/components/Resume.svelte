@@ -1,4 +1,5 @@
 <script>
+    import {fly, fade } from 'svelte/transition'
     const resume = {
         contact: {
             email: "dsardak@wpi.edu",
@@ -94,7 +95,7 @@
     }
 
 </script>
-<div class="container">
+<div class="container" in:fly="{{ y:-500}}" out:fade>
     
     <!-- <h1>Loaded</h1> -->
     {#each Object.entries(resume) as [key, value] }
@@ -170,8 +171,8 @@
 <style>
     .container {
         font-size: 16px;
-        border: 1px solid black;
-        border-radius: 2%;
+        border: 1px solid var(--col);
+        border-radius: 10px;
         padding: 1em;
     }
     .header > p {

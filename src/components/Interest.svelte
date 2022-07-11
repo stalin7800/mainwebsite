@@ -52,7 +52,7 @@
 <style>
     .interest {
         border: 1px dashed var(--col);
-        border-radius: 5px;
+        border-radius: 10px;
         margin-top: 5em;
         color: var(--col);
         background-color: var(--bgc) ;
@@ -74,11 +74,13 @@
     .tabviewer {
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
     .tabviewer > p {
         cursor: pointer;
         border: 1px solid var(--col);
         border-radius: 100%;
+        padding: 1em;
         aspect-ratio: 1;
         transition: all .5s ease-in;
         user-select: none;

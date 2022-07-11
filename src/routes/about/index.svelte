@@ -4,12 +4,14 @@
 </script>
 <main>
     <h1>About Me</h1>
-    <p>I am currently sophomore at Worcester Polytechnic Institute double majoring in Computer Science and Data Science, and minoring in Statistics. 
+    <p>I am currently a sophomore at Worcester Polytechnic Institute double majoring in Computer Science and Data Science, and minoring in Statistics. 
         My hobbies include chess, video games, and general programming projects (such as this website). Please feel free to reach out if you have any questions, or would just like to talk.
     </p>
     <div class="buttonshower">
         <button on:click={() => {
-            opentab='resume'
+            if(opentab != 'resume')
+                opentab='resume'
+            else opentab=''
         }}>Resume</button>
         <button on:click={() => {
             opentab = 'linkedin'
@@ -30,7 +32,7 @@
         <input type="text" disabled value="linkedinlink">
     
     {:else if (opentab== 'resume')}
-    
+
         <Resume />
 
     {/if}
@@ -38,7 +40,7 @@
 <style>
     main {
         border:1px solid var(--col);
-        border-radius: 10%;
+        border-radius: 10px;
         padding: 1em;
         margin-top: 5em;
     } 

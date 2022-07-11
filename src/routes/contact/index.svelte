@@ -11,17 +11,23 @@
         console.log(data)
     }
 </script>
-<h1>Contact Form</h1>
-<form on:submit|preventDefault={onSubmit}>
-    <p>Your name</p>
-    <input type="text" name="name" placeholder="Your name">
-    <p>Your message</p>
-    <textarea name="message" id="" rows="10"></textarea>
-    <br>
-    <button type="submit" >Submit</button>
-</form>
+
+<div class="cont">
+    <h1>Contact Form</h1>
+    <form on:submit|preventDefault={onSubmit}>
+        <p>Your name</p>
+        <input type="text" name="name" placeholder="Your name">
+        <p>Your message</p>
+        <textarea name="message" id="" rows="10"></textarea>
+        <br>
+        <button type="submit" >Submit</button>
+    </form>
+</div>
 
 <style> 
+    .cont {
+        margin-top: 2em;
+    }
     h1 {
         text-align: center;
     }
@@ -29,10 +35,13 @@
         width: 85%;
         margin-inline: auto;
         border-radius: 5px;
-        border: 1px solid black;;
+        border: 1px solid var(--col);
     }
     form > * {
         margin-left: 10%;
+    }
+    form > p {
+        cursor: default;
     }
     textarea {
         resize: none;
