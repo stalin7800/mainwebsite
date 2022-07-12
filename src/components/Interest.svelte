@@ -10,33 +10,7 @@
 
        
 </script>
-<!-- <div class="interest">
 
-    <h1>{cat.title}</h1>
-    <p>{cat.gendesc} </p>
-    <button on:click={() => {
-        expanded = !expanded
-    }}> { (expanded==false) ? 'Expand' : 'Minimize'} </button>
-
-   
-
-    {#if expanded}
-        <div class="tabviewer" out:fly="{{y:-500, duration: 300}}" in:fly="{{y: -500, duration: 300}}">
-            <p on:click={() => {
-
-                if(i==0) i = cat.tabs.length-1
-                else i -= 1
-            }}>&larr;</p>
-            <SampleProject tab={cat.tabs[i]}  />
-            <p on:click={() => {
-                if(i==cat.tabs.length-1) i=0
-                else i += 1
-            }}>&rarr;</p>
-        </div>
-    {/if}
-  
-
-</div> -->
 
     <div class="interest">
         <h1>{cat.title}</h1>
