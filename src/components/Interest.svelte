@@ -1,27 +1,16 @@
 <script>
-    import { info } from '../lib/datascienceprojects'
     import SampleProject from './SampleProject.svelte';
     
     import { fly, fade } from 'svelte/transition'
 
     
     
-    export let cat
+    export let cat 
     let expanded = false, i=0
 
-        function switchTab(dir) {
-        console.log('clicked a thing')
-        let len = cat.tabs.length
-        if(dir=='left') {
-            if(i==0) i = len-1
-            else i -= 1
-        }else {
-            if(i==len-1) i=0
-            else i += 1
-        }
-    }
+       
 </script>
-<div class="interest">
+<!-- <div class="interest">
 
     <h1>{cat.title}</h1>
     <p>{cat.gendesc} </p>
@@ -47,7 +36,33 @@
     {/if}
   
 
+</div> -->
+
+    <div class="interest">
+        <h1>{cat.title}</h1>
+        <p>{cat.gendesc}</p>
+        <button on:click={() => {
+            expanded = !expanded
+        }}> { (expanded==false) ? 'Expand' : 'Minimize'} </button>
+
+{#if expanded }
+        <div class="tabviewer">
+            <p on:click={() => {
+                if(i==0) i = cat.tabs.length-1
+                else i -= 1
+            }}>&larr;</p>
+                    <SampleProject tab={cat.tabs[i]} />
+                    <p on:click={() => {
+                        if(i==cat.tabs.length-1) i=0
+                        else i += 1
+                    }}>&rarr;</p>
+
+        </div>
+
+    {/if}
+
 </div>
+
 
 <style>
     .interest {

@@ -1,5 +1,6 @@
 <script>
     export let tab
+import { dataset_dev } from 'svelte/internal'
     import { fly, slide } from 'svelte/transition'
 </script>
 
@@ -7,6 +8,9 @@
     <h1>{tab.name}</h1>
     <img src={tab.url} alt="">
     <p>{tab.description}</p>
+
+    
+
 </div>
 
 <style>
